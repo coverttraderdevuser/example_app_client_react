@@ -1,0 +1,22 @@
+.home .open-toggler {
+  position: fixed;
+  top: -100%;
+}
+
+.home .container {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #00d9d6;
+  width: 100vw;
+  height: 100vh;
+  left: -100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.home .open-toggler:checked ~ .container {
+  left: 0;
+}
+/*# sourceMappingURL=Home.css.map */

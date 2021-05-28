@@ -1,0 +1,83 @@
+
+
+.login {
+
+    .close-toggler {
+        position: fixed;
+       top: -100%
+    }
+
+    .container {
+        position:fixed;
+        display: flex;
+
+        align-items: Center;
+        padding-left: 20%;
+        padding-right: 20%;
+        background: #00d9d6;
+        width:100vw;
+        height:100vh;
+        left:0px;
+        transition: 0.5s ease-in-out;
+
+        .curtains {
+            position:fixed;
+            height:100vh;
+            width:350px;
+            background: red;
+        }
+        .body {
+            display:flex;
+            text-align: center;
+            border:solid;
+            // align-items: stretch;
+            padding: 20%;
+            .logo {
+                display: block;
+                flex-direction: row;
+                color: azure;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 5em;
+                text-align: right;
+                //border:solid;
+                width:auto;
+
+            }
+
+            .divider {
+                display: flex;
+                width: 1em;
+                align-items: center;
+                text-align: center;
+                padding: 5%;
+                //border: solid;
+                height:auto;
+                .line {
+                    background:white;
+                    width: 3px;
+                    height: 180%;
+
+                }
+            }
+
+            .credentials {
+                display:flex;
+                flex-direction: column;
+                text-align: left;
+            }
+
+
+
+        }
+
+    }
+
+    .close-toggler:checked {
+        ~
+        .container {
+            left:200%;
+        }   
+
+    }
+}
+

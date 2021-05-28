@@ -1,0 +1,29 @@
+.home {
+    
+    .open-toggler {
+        position: fixed;
+       top: -100%
+    }
+
+    .container {
+        position:fixed;
+        display: flex;
+
+        //align-items: Center;
+
+        background: #00d9d6;
+        width:100vw;
+        height:100vh;
+        left:-100%;
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .open-toggler:checked {
+        ~
+        .container {
+            left:0;
+        }   
+
+    }
+}

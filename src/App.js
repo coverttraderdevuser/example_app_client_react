@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
+// import Splash from './components/splash'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import Login from './components/Login'
+import Home from './components/Home'
+import Status from './components/Status'
+
 
 function App() {
+const [statusText, setStatusText] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Status text={statusText}/>
+      <Router>
+        <Route path={['/', '/login']} exact render = { () => (
+          <>
+          {<Login setStatusText={setStatusText}/>}
+          </>
+        )
+          
+        } 
+        />
+
+      <Route path={'/home'} exact render = { () => (
+          <>
+          
+          <Home/>
+          </>
+        )
+          
+        } 
+        />
+
+      </Router>
+      {/* <Splash/> */}
+      
     </div>
   );
 }

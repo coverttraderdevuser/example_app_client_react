@@ -1,0 +1,77 @@
+.transitionElement {
+  position: absolute;
+  z-index: 3;
+  width: auto;
+  height: auto;
+}
+
+.transitionElement .start-toggler {
+  position: fixed;
+  top: -100%;
+}
+
+.transitionElement .container {
+  background: transparent;
+  left: -300%;
+  border: solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 25fr 2fr 1fr 2fr 1fr 5fr 1fr 10fr;
+      grid-template-columns: 6fr 25fr 2fr 1fr 2fr 1fr 5fr 1fr 10fr;
+  width: 200vw;
+  height: 100vh;
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+}
+
+.transitionElement .container .stripe {
+  background: #00d9d6;
+  width: 100%;
+  height: 100%;
+}
+
+.transitionElement .container .space {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.transitionElement .container2 {
+  position: absolute;
+  background: transparent;
+  left: -1500vw;
+  border: solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 40fr 5fr 25fr 10fr;
+      grid-template-columns: 5fr 40fr 5fr 25fr 10fr;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+}
+
+.transitionElement .container2 .stripe {
+  background: #00d9d6;
+  width: 100%;
+  height: 100%;
+}
+
+.transitionElement .container2 .space {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.transitionElement .start-toggler:checked ~ .container {
+  left: 200%;
+}
+
+.transitionElement .start-toggler:checked ~ .container2 {
+  left: 100vw;
+}
+
+.transitionElement .start-toggler:checked ~ .container2 .space {
+  width: 200%;
+}
+/*# sourceMappingURL=TransitionElement.css.map */
