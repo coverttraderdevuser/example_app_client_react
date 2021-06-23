@@ -5,14 +5,15 @@
 
 .login .container {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: Center;
       -ms-flex-align: Center;
           align-items: Center;
-  padding-left: 20%;
-  padding-right: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: center;
   background: #00d9d6;
   width: 100vw;
   height: 100vh;
@@ -29,11 +30,10 @@
 }
 
 .login .container .body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  border: solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.1fr 1fr;
+      grid-template-columns: 1fr 0.1fr 1fr;
   padding: 20%;
 }
 
@@ -48,6 +48,7 @@
   font-size: 5em;
   text-align: right;
   width: auto;
+  padding: 10%;
 }
 
 .login .container .body .divider {
@@ -59,7 +60,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 5%;
+  padding: 1%;
   height: auto;
 }
 
@@ -78,6 +79,12 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
+  width: 15vw;
+  min-width: 200px;
+}
+
+.login .container .body .credentials .submit {
+  margin-top: 2em;
 }
 
 .login .close-toggler:checked ~ .container {

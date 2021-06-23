@@ -5,38 +5,81 @@ const Menu = () => {
     return (
         <div>
 
-<div class="navbar">
-  <a href="#home">Home</a>
-  <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#company">Company</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
-    </div>
-  </div>
-  <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#bring">Bring</a>
-      <a href="#deliver">Deliver</a>
-      <a href="#package">Package</a>
-      <a href="#express">Express</a>
-    </div>
-  </div>
-  <div class="subnav">
-    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
-      <a href="#link4">Link 4</a>
-    </div>
-  </div>
-  <a href="#contact">Contact</a>
+<div className="navbar">
+<ul id="nav">
+        <li><a href="/">Data</a>
+          <ul>
+              <li><a href="/">Source »</a>
+                <ul>
+                <li><a href="/">Streaming (Kafka)</a></li>
+                <li><a href="/">Hadoop</a></li>
+                <li><a href="/">Local</a></li>
+                </ul>               
+              </li>
+              <li><a href="/">Format »</a>
+                <ul>
+                <li><a href="/">CSV</a></li>
+                <li><a href="/">JSON</a></li>
+                <li><a href="/">AVRO</a></li>
+                <li><a href="/">Protocol Buffers</a></li>
+                <li><a href="/">Parquet</a></li>
+                </ul>               
+              </li>
+
+              <li><a href="/">Trasformation »</a>
+                <ul>
+                  <li><a href="/">Regex</a></li>
+                  <li><a href="/">Boundaries</a></li>
+                  <li><a href="/">Validation</a></li>
+                  <li><a href="/">Cleansing</a></li>
+                </ul>                
+              </li>
+
+              <li><a href="/">Load »</a>
+                <ul>
+                  <li><a href="/">Import to Database</a></li>
+                  <li><a href="/">Import to Data Lake</a></li>
+                  <li><a href="/">Export to File</a></li>
+                  <li><a href="/">Export to Stream</a></li>
+                </ul>               
+              </li>
+            </ul>
+        </li>
+        <li><a href="/">Business Intelligence</a>
+            <ul>
+                <li><a href="/">Analysis »</a>
+
+                  <ul>
+                        <li><a href="/">Metrics</a></li>
+                        <li><a href="/">Key Performance Indicators (KPI)</a></li>
+                        <li><a href="/">Reports</a></li>
+                        
+                  </ul>                
+                </li>
+                <li><a href="/">Dashboards</a></li>
+
+            </ul>
+        </li>
+        <li><a href="/">Analytics</a>
+          <ul>
+            <li><a href="/">Regression »</a>
+              <ul>
+                <li><a href="/">Linear</a></li>
+                <li><a href="/">Logistic</a></li>
+              </ul>
+            </li> 
+            <li><a href="/">Clustering</a></li>
+            <li><a href="/">Factor Analysis</a></li>
+            <li><a href="/">Time Series</a></li>
+          </ul>
+
+        </li>        
+        
+    </ul>
 </div>
         </div>
     )
 }
 
 export default Menu
+
